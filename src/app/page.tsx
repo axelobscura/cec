@@ -13,19 +13,29 @@ export default function Home() {
   return (
     <>
       <Container fluid className='vh-100'>
-        <Row>
+        <Row className='header'>
           <Col>
             <Image
               src="/logo.svg"
-              width={200}
-              height={100}
+              width={150}
+              height={45}
               alt="Picture of the author"
             />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            
             <h1>Acervo Digital</h1>
-            <p><small>Instituto Mexicano del Cemento y del Concreto A.C.</small></p>
+            
           </Col>
           <Col>
             <h3>Test</h3>
+          </Col>
+        </Row>
+        <Row className='footer'>
+          <Col>
+          <p><small>® 1956 - 2023. Instituto Mexicano del Cemento y del Concreto A.C.</small></p>
           </Col>
         </Row>
       </Container>
