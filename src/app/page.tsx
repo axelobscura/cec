@@ -3,8 +3,7 @@ import styles from './page.module.css'
 import { useAcervo } from 'lib/swr-hooks'
 import {Container, Row, Col} from 'react-bootstrap'
 import Image from 'next/image'
-import { GiAbstract021, GiAbstract016 } from "react-icons/gi"
-import ListGroup from 'react-bootstrap/ListGroup'
+import Menu from './components/Menu';
 
 export default function Home() {
   const { acervo, isLoading } = useAcervo();
@@ -12,6 +11,12 @@ export default function Home() {
     <h1>Loading</h1>
   }
   console.log('acervo: ' + JSON.stringify(acervo));
+
+  const menuHover = (e: any) => {
+    //const removeId = e.target.dataset.tipo;
+    console.log(e);
+  }
+
   return (
     <>
       <Container fluid className='vh-100'>
@@ -27,13 +32,7 @@ export default function Home() {
         </Row>
         <Row className='contenido'>
           <Col sm={1} className='menu'>
-            <ListGroup variant="flush">
-              <ListGroup.Item><GiAbstract021 size='2em' /></ListGroup.Item>
-              <ListGroup.Item><GiAbstract016 size='2em' /></ListGroup.Item>
-              <ListGroup.Item><GiAbstract021 size='2em' /></ListGroup.Item>
-              <ListGroup.Item><GiAbstract021 size='2em' /></ListGroup.Item>
-            </ListGroup>
-            
+            <Menu menuHover={(e: any) => menuHover(e)} />
           </Col>
           <Col sm={3} className='menu'>
             wef

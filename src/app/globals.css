@@ -159,3 +159,7 @@ a {
 .contenido {
   height: 100vh;
 }
+
+.list-group-item {
+  background: transparent !important;
+}
