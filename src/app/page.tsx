@@ -3,7 +3,7 @@ import styles from './page.module.css'
 import { useAcervo } from 'lib/swr-hooks'
 import {Container, Row, Col} from 'react-bootstrap'
 import Image from 'next/image'
-import { FaBeer } from 'react-icons/fa'
+import { GiAbstract021, GiAbstract016 } from "react-icons/gi"
 import ListGroup from 'react-bootstrap/ListGroup'
 
 export default function Home() {
@@ -25,13 +25,13 @@ export default function Home() {
             />
           </Col>
         </Row>
-        <Row>
+        <Row className='contenido'>
           <Col sm={1} className='menu'>
             <ListGroup variant="flush">
-              <ListGroup.Item><FaBeer /></ListGroup.Item>
-              <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-              <ListGroup.Item>Morbi leo risus</ListGroup.Item>
-              <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
+              <ListGroup.Item><GiAbstract021 size='2em' /></ListGroup.Item>
+              <ListGroup.Item><GiAbstract016 size='2em' /></ListGroup.Item>
+              <ListGroup.Item><GiAbstract021 size='2em' /></ListGroup.Item>
+              <ListGroup.Item><GiAbstract021 size='2em' /></ListGroup.Item>
             </ListGroup>
             
           </Col>

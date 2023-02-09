@@ -115,6 +115,9 @@ a {
   border-bottom: 1px solid rgb(32, 46, 80);
   border-color: rgb(32, 46, 80);
   padding: 7px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .footer {
@@ -124,21 +127,35 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(25, 35, 56);
 }
 
 .footer p {
   text-align: center;
   padding: 7px;
+  margin: 0;
+  padding-bottom: 10px;
 }
 
 .menu {
   border-right: 1px solid rgb(32, 46, 80);
   border-right-color: rgb(32, 46, 80);
-border-color: rgb(32, 46, 80);
+  border-color: rgb(32, 46, 80);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .list-group-item {
   background: transparent;
   color: #fff;
   text-align: center;
+}
+
+.contenido {
+  height: 100vh;
 }
