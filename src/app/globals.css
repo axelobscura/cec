@@ -136,3 +136,9 @@ a {
   border-right-color: rgb(32, 46, 80);
 border-color: rgb(32, 46, 80);
 }
+
+.list-group-item {
+  background: transparent;
+  color: #fff;
+  text-align: center;
+}
