@@ -1,9 +1,16 @@
-import { Inter } from '@next/font/google'
+"use client";
 import styles from './page.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import { useAcervo } from 'lib/swr-hooks'
 
 export default function Home() {
+  const { acervo, isLoading } = useAcervo();
+
+  if(isLoading){
+    <h1>Loading</h1>
+  }
+
+  console.log('acervo: ' + JSON.stringify(acervo));
+
   return (
     <main className={styles.main}>
       <div>
