@@ -24,12 +24,14 @@ export default function Home() {
           </Col>
         </Row>
         <Row>
-          <Col>
-            
-            <h1>Acervo Digital</h1>
-            
+          <Col sm={1} className='menu'>
+            wef
+          </Col>
+          <Col sm={3} className='menu'>
+            wef
           </Col>
           <Col>
+            <h1>Acervo Digital</h1>
             <h3>Test</h3>
           </Col>
         </Row>
