@@ -11,7 +11,7 @@ export default function Home() {
   console.log('acervo: ' + JSON.stringify(acervo));
   return (
     <>
-      <Container fluid>
+      <Container fluid className='vh-100'>
         <Row>
           <Col>
             <h1>Acervo Digital</h1>
