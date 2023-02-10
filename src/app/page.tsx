@@ -46,8 +46,7 @@ export default function Home() {
             {menuActivo}
           </Col>
           <Col className='principal'>
-
-            <h3>{menuActivo}</h3>
+            <h4>{menuActivo}</h4>
           </Col>
         </Row>
         <Row className='footer'>

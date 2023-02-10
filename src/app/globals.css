@@ -168,6 +168,13 @@ a {
   padding-top: 70px;
 }
 
+.principal h4 {
+  border-bottom: 1px solid rgb(32, 46, 80);
+  background-color: rgb(25, 35, 56);
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
 ul.menuPrincipal {
   list-style: none;
   margin: 0;
