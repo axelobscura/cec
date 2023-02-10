@@ -6,10 +6,12 @@ import Image from 'next/image'
 import Menu from './components/Menu'
 import Loader from './components/Loader';
 import Buscador from './components/Buscador';
+import Principal from './components/Principal';
 
 export default function Home() {
   const { acervo, isLoading } = useAcervo();
   const [menuActivo, setMenuActivo] = useState('');
+  const [icono, setIcono] = useState('');
 
   if(isLoading){
     <Loader />
@@ -18,7 +20,9 @@ export default function Home() {
   const menuHover = (e: any) => {
     if(e.target.viewportElement){
       const removeId = e.target.viewportElement.dataset.nombre;
+      const icono = e.target.outerHTML;
       setMenuActivo(removeId);
+      setIcono(icono);
     }
   }
 
@@ -46,7 +50,7 @@ export default function Home() {
             {menuActivo}
           </Col>
           <Col className='principal'>
-            <h4>{menuActivo}</h4>
+            <Principal menuActivo={menuActivo} />
           </Col>
         </Row>
         <Row className='footer'>
