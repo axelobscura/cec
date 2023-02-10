@@ -187,3 +187,23 @@ ul.menuPrincipal li {
 ul.menuPrincipal li svg {
   cursor: pointer;
 }
+
+.wrapBuscador {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  padding-right: 10px;
+}
+
+.wrapBuscador form {
+  width: 100%;
+}
+
+.wrapBuscador form input {
+  border-radius: 0;
+  border: none;
+  border: 1px solid rgb(32, 46, 80);
+  background-color: rgb(16, 23, 37);
+  color: #fff;
+}

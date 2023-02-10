@@ -5,6 +5,7 @@ import {Container, Row, Col} from 'react-bootstrap'
 import Image from 'next/image'
 import Menu from './components/Menu'
 import Loader from './components/Loader';
+import Buscador from './components/Buscador';
 
 export default function Home() {
   const { acervo, isLoading } = useAcervo();
@@ -25,13 +26,16 @@ export default function Home() {
     <>
       <Container fluid className='vh-100'>
         <Row className='header'>
-          <Col>
+          <Col sm={4}>
             <Image
               src="/logo.svg"
               width={150}
               height={45}
               alt="Picture of the author"
             />
+          </Col>
+          <Col className='wrapBuscador'>
+            <Buscador />
           </Col>
         </Row>
         <Row className='contenido'>
@@ -42,6 +46,7 @@ export default function Home() {
             {menuActivo}
           </Col>
           <Col className='principal'>
+
             <h3>{menuActivo}</h3>
           </Col>
         </Row>
