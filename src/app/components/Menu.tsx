@@ -28,7 +28,7 @@ export default function Menu({menuHover}:MenuProps) {
       {categorias.map((val: any) => {
         return(
           <ListGroup.Item as="div" action key={val.id} data-nombre={val.nombre} onClick={(e) => menuHover(e)} className="m-1">
-            <>{iconos[val.id]}</>
+            <SiDiscogs size='1.5rem' />
           </ListGroup.Item>
         )
       })}
