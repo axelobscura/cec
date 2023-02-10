@@ -1,6 +1,6 @@
 import { SiFirebase, SiBroadcom, SiCastro, SiCkeditor4, SiChainlink, SiCrystal, SiDiscogs } from "react-icons/si";
-import ListGroup from 'react-bootstrap/ListGroup'
 import { useCategorias } from "lib/swr-hooks";
+import Loader from "./Loader";
 
 type MenuProps = {
   menuHover: any | unknown
@@ -20,7 +20,7 @@ export default function Menu({menuHover}:MenuProps) {
   const { categorias, isLoading } = useCategorias();
   if(isLoading){
     return(
-      <h1>CARGANDO</h1>
+      <Loader />
     )
   }
   

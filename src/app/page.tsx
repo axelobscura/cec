@@ -3,14 +3,15 @@ import { useState } from 'react';
 import { useAcervo } from 'lib/swr-hooks'
 import {Container, Row, Col} from 'react-bootstrap'
 import Image from 'next/image'
-import Menu from './components/Menu';
+import Menu from './components/Menu'
+import Loader from './components/Loader';
 
 export default function Home() {
   const { acervo, isLoading } = useAcervo();
   const [menuActivo, setMenuActivo] = useState('');
 
   if(isLoading){
-    <h1>Loading</h1>
+    <Loader />
   }
 
   const menuHover = (e: any) => {
