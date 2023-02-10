@@ -14,9 +14,10 @@ export default function Home() {
   }
 
   const menuHover = (e: any) => {
-    const removeId = e.target.dataset.nombre;
-    setMenuActivo(removeId);
-    console.log(removeId);
+    if(e.target.viewportElement){
+      const removeId = e.target.viewportElement.dataset.nombre;
+      setMenuActivo(removeId);
+    }
   }
 
   return (

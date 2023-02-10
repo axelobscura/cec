@@ -6,6 +6,16 @@ type MenuProps = {
   menuHover: any | unknown
 };
 
+const icons: any | unknown = [
+  SiFirebase,
+  SiBroadcom,
+  SiCastro,
+  SiCkeditor4,
+  SiChainlink,
+  SiCrystal,
+  SiDiscogs
+];
+
 export default function Menu({menuHover}:MenuProps) {
   const { categorias, isLoading } = useCategorias();
   if(isLoading){
@@ -13,25 +23,17 @@ export default function Menu({menuHover}:MenuProps) {
       <h1>CARGANDO</h1>
     )
   }
-  const iconos = [
-    <SiFirebase size='1.5rem' />, 
-    <SiBroadcom size='1.5rem' />, 
-    <SiCastro size='1.5rem' />, 
-    <SiFirebase size='1.5rem' />,
-    <SiChainlink size='1.5rem' />,
-    <SiCkeditor4 size='1.5rem' />,
-    <SiCrystal size='1.5rem' />,
-    <SiDiscogs size='1.5rem' />
-  ]
+  
   return (
-    <ListGroup variant="flush">
-      {categorias.map((val: any) => {
+    <ul className="menuPrincipal">
+      {categorias.map((val: any, idx: number) => {
+        let Icon = icons[idx];
         return(
-          <ListGroup.Item as="div" action key={val.id} data-nombre={val.nombre} onClick={(e) => menuHover(e)} className="m-1">
-            <SiDiscogs size='1.5rem' />
-          </ListGroup.Item>
+          <li key={val.id} data-nombre={val.nombre} className="m-1">
+            <Icon data-nombre={val.nombre} onClick={(e:any) => menuHover(e)} size='1.9rem'>{val.nombre}</Icon>
+          </li>
         )
       })}
-    </ListGroup>
+    </ul>
   )
 }
