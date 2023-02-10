@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import { SiPlex } from "react-icons/si";
 
 type ContenidoProps = {
   menuActivo: any | unknown
@@ -6,9 +6,13 @@ type ContenidoProps = {
 
 export default function Principal({menuActivo}: ContenidoProps){
   return (
-    <>
-      <h4>{menuActivo}</h4>
-      <p>Contenido</p>
-    </>
+    <div className='contenidoPrincipal'>
+      {menuActivo &&
+        <>
+          <h4><SiPlex style={{marginRight: '5px'}} /> {menuActivo}</h4>
+          <p>Contenido</p>
+        </>
+      }
+    </div>
   )
 }
