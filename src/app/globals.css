@@ -162,4 +162,9 @@ a {
 
 .list-group-item {
   background: transparent !important;
+  cursor: pointer;
+}
+
+.principal {
+  padding-top: 90px;
 }

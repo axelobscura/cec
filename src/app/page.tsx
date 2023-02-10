@@ -1,5 +1,5 @@
 "use client";
-import styles from './page.module.css'
+import { useState } from 'react';
 import { useAcervo } from 'lib/swr-hooks'
 import {Container, Row, Col} from 'react-bootstrap'
 import Image from 'next/image'
@@ -7,14 +7,16 @@ import Menu from './components/Menu';
 
 export default function Home() {
   const { acervo, isLoading } = useAcervo();
+  const [menuActivo, setMenuActivo] = useState('');
+
   if(isLoading){
     <h1>Loading</h1>
   }
-  console.log('acervo: ' + JSON.stringify(acervo));
 
   const menuHover = (e: any) => {
-    //const removeId = e.target.dataset.tipo;
-    console.log(e);
+    const removeId = e.target.dataset.nombre;
+    setMenuActivo(removeId);
+    console.log(removeId);
   }
 
   return (
@@ -35,11 +37,10 @@ export default function Home() {
             <Menu menuHover={(e: any) => menuHover(e)} />
           </Col>
           <Col sm={3} className='menu'>
-            wef
+            {menuActivo}
           </Col>
-          <Col>
-            <h1>Acervo Digital</h1>
-            <h3>Test</h3>
+          <Col className='principal'>
+            <h3>{menuActivo}</h3>
           </Col>
         </Row>
         <Row className='footer'>

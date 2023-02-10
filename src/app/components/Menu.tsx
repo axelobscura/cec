@@ -18,9 +18,9 @@ export default function Menu({menuHover}:MenuProps) {
 
   return (
     <ListGroup variant="flush">
-      {categorias.map((i: number, val: any) => {
+      {categorias.map((val: any) => {
         return(
-          <ListGroup.Item key={i} data-nombre={val.nombre} onMouseEnter={(e) => menuHover(e)}>
+          <ListGroup.Item key={val.id} data-nombre={val.nombre} onMouseEnter={(e) => menuHover(e)}>
             <GiAbstract021 size='2em' />
           </ListGroup.Item>
         )
