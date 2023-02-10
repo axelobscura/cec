@@ -109,7 +109,6 @@ a {
   }
 }
 
-
 .header {
   background-color: rgb(25, 35, 56);
   border-bottom: 1px solid rgb(32, 46, 80);
@@ -166,7 +165,7 @@ a {
 }
 
 .principal {
-  padding-top: 90px;
+  padding-top: 70px;
 }
 
 ul.menuPrincipal {
