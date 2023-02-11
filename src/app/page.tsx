@@ -43,7 +43,7 @@ export default function Home() {
           </Col>
         </Row>
         <Row className='contenido'>
-          <Col sm={1} className='menu'>
+          <Col xs={1} sm={1} className='menu'>
             <Menu menuHover={(e: any) => menuHover(e)} />
           </Col>
           <Col sm={3} className='menu'>
