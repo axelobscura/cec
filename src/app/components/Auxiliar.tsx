@@ -20,7 +20,7 @@ export default function Auxiliar({ menuActivo }: Activo){
       <ul className='menuauxiliar'>
       {acervoCategoriasGeneral.map((val: any) => {
         return(
-          <li>{val.name}</li>
+          <li key={val.id}>{val.name}</li>
         )
       })}
       </ul>
