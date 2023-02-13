@@ -13,6 +13,7 @@ export default function Home() {
   const { acervo, isLoading } = useAcervo();
   const [menuActivo, setMenuActivo] = useState('');
   const [icono, setIcono] = useState('');
+  const [terminoBusqueda, setTerminoBusqueda] = useState('');
 
   if(isLoading){
     <Loader />
@@ -25,6 +26,10 @@ export default function Home() {
       setMenuActivo(removeId);
       setIcono(icono);
     }
+  }
+
+  const termino = (e: any) => {
+    setTerminoBusqueda(e.target.value);
   }
 
   return (
@@ -40,7 +45,7 @@ export default function Home() {
             />
           </Col>
           <Col className='wrapBuscador'>
-            <Buscador />
+            <Buscador termino={(e: any) => termino(e)} />
           </Col>
         </Row>
         <Row className='contenido'>
@@ -51,7 +56,7 @@ export default function Home() {
             <Auxiliar menuActivo={menuActivo} />
           </Col>
           <Col className='principal'>
-            <Principal menuActivo={menuActivo} />
+            <Principal menuActivo={menuActivo} terminoBusqueda={terminoBusqueda} />
           </Col>
         </Row>
         <Row className='footer'>

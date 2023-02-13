@@ -1,10 +1,20 @@
 import Form from 'react-bootstrap/Form';
 
-export default function Buscador(){
+interface ElTermino {
+  termino: any
+}
+
+export default function Buscador({ termino }: ElTermino){
+
   return (
     <Form>
       <Form.Group controlId="formBasicEmail">
-        <Form.Control type="email" placeholder="Buscar contenido" />
+        <Form.Control 
+          type="text" 
+          name="termino" 
+          placeholder="Buscar contenido" 
+          onChange={(e) => termino(e)} 
+        />
       </Form.Group>
     </Form>
   )
