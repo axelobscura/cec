@@ -24,3 +24,13 @@ export function useAcervo(){
     isError: error,
   }
 }
+
+export function useAcervoCategoriasGenerales(){
+  const { data, error } = useSWR(`/api/get-categoriasGenerales`, fetcher)
+
+  return {
+    acervoCategoriasGeneral: data,
+    isLoading: !error && !data,
+    isError: error,
+  }
+}

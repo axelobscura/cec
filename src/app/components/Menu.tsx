@@ -39,7 +39,7 @@ export default function Menu({menuHover}:MenuProps) {
               val.id === 6 ? <SiCrystal data-nombre={val.nombre} onClick={(e:any) => menuHover(e)} size='30px' /> : 
               val.id === 7 ? <SiDiscogs data-nombre={val.nombre} onClick={(e:any) => menuHover(e)} size='30px' /> : 
               val.id === 8 ? <SiAppveyor data-nombre={val.nombre} onClick={(e:any) => menuHover(e)} size='30px' /> : 
-              <SiFirebase onClick={(e:any) => menuHover(e)} size='30px' />
+              ''
             }
           </li>
         )

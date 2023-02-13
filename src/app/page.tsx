@@ -7,6 +7,7 @@ import Menu from './components/Menu'
 import Loader from './components/Loader';
 import Buscador from './components/Buscador';
 import Principal from './components/Principal';
+import Auxiliar from './components/Auxiliar';
 
 export default function Home() {
   const { acervo, isLoading } = useAcervo();
@@ -47,7 +48,7 @@ export default function Home() {
             <Menu menuHover={(e: any) => menuHover(e)} />
           </Col>
           <Col sm={3} className='menu'>
-            {menuActivo}
+            <Auxiliar menuActivo={menuActivo} />
           </Col>
           <Col className='principal'>
             <Principal menuActivo={menuActivo} />

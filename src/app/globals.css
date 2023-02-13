@@ -218,3 +218,24 @@ ul.menuPrincipal li svg {
 .contenidoPrincipal p {
   padding: 10px 20px;
 }
+
+.auxiliar {
+  height: 100vh;
+  width: 100%;
+  padding-top: 70px;
+  padding-bottom: 40px;
+}
+
+.auxiliar ul.menuauxiliar {
+  height: 85vh;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.auxiliar ul.menuauxiliar li {
+  position: relative;
+  float: left;
+  width: 100%;
+}
