@@ -14,6 +14,7 @@ export default function Home() {
   const [menuActivo, setMenuActivo] = useState('');
   const [icono, setIcono] = useState('');
   const [terminoBusqueda, setTerminoBusqueda] = useState('');
+  const [terminoAuxiliarBusqueda, setAuxiliarTerminoBusqueda] = useState('');
 
   if(isLoading){
     <Loader />
@@ -30,6 +31,10 @@ export default function Home() {
 
   const termino = (e: any) => {
     setTerminoBusqueda(e.target.value);
+  }
+
+  const auxiliarActivo = (val: any) => {
+    setAuxiliarTerminoBusqueda(val.target.innerText);
   }
 
   return (
@@ -53,10 +58,10 @@ export default function Home() {
             <Menu menuHover={(e: any) => menuHover(e)} />
           </Col>
           <Col sm={3} className='menu'>
-            <Auxiliar menuActivo={menuActivo} />
+            <Auxiliar menuActivo={menuActivo} auxiliarActivo={auxiliarActivo} />
           </Col>
           <Col className='principal'>
-            <Principal menuActivo={menuActivo} terminoBusqueda={terminoBusqueda} />
+            <Principal menuActivo={menuActivo} terminoBusqueda={terminoBusqueda} terminoAuxiliarBusqueda={terminoAuxiliarBusqueda} />
           </Col>
         </Row>
         <Row className='footer'>

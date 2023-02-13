@@ -23,7 +23,6 @@ export default function Menu({menuHover}:MenuProps) {
       <Loader />
     )
   }
-  
   return (
     <ul className="menuPrincipal">
       {categorias.map((val: any, idx: number) => {
