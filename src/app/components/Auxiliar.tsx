@@ -13,7 +13,6 @@ export default function Auxiliar({ menuActivo }: Activo){
       <Loader />
     )
   }
-  console.log(acervoCategoriasGeneral);
   return (
     <div className='auxiliar'>
       {/*<h2>{menuActivo}</h2>*/}

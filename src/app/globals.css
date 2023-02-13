@@ -250,4 +250,11 @@ ul.menuPrincipal li svg {
   margin: 0 25px 5px 0;
   padding-left: 10px;
   background-color: rgb(25, 35, 56);
+  transition: all 1s;
+  cursor: pointer;
+}
+
+.auxiliar ul.menuauxiliar li:hover {
+  border: 1px solid rgb(152, 167, 204);
+  border-color: rgb(152, 167, 204);
 }
