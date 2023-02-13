@@ -78,6 +78,8 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  scrollbar-width: thin;
+scrollbar-color: rgb(51, 70, 112) rgb(19, 26, 42);
 }
 
 html,
@@ -101,6 +103,8 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(51, 70, 112) rgb(19, 26, 42);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -232,10 +236,18 @@ ul.menuPrincipal li svg {
   margin: 0;
   padding: 0;
   list-style: none;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(51, 70, 112) rgb(19, 26, 42);
 }
 
 .auxiliar ul.menuauxiliar li {
   position: relative;
   float: left;
   width: 100%;
+  padding: 3px;
+  padding-left: 3px;
+  border: 1px solid rgb(32, 46, 80);
+  margin: 0 25px 5px 0;
+  padding-left: 10px;
+  background-color: rgb(25, 35, 56);
 }
