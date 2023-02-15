@@ -219,8 +219,11 @@ ul.menuPrincipal li svg {
   color: #fff;
 }
 
-.contenidoPrincipal p {
-  padding: 10px 20px;
+.contenidoPrincipal {
+  height: 85vh;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(51, 70, 112) rgb(19, 26, 42);
 }
 
 .auxiliar {
