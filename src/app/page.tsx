@@ -1,5 +1,5 @@
 "use client";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useAcervo } from 'lib/swr-hooks'
 import {Container, Row, Col} from 'react-bootstrap'
 import Image from 'next/image'
@@ -10,11 +10,12 @@ import Principal from './components/Principal';
 import Auxiliar from './components/Auxiliar';
 
 export default function Home() {
-  const { acervo, isLoading } = useAcervo();
+  const {acervo, isLoading} = useAcervo();
   const [menuActivo, setMenuActivo] = useState('');
   const [icono, setIcono] = useState('');
   const [terminoBusqueda, setTerminoBusqueda] = useState('');
   const [terminoAuxiliarBusqueda, setAuxiliarTerminoBusqueda] = useState('');
+  const [elAcervo, setElAcervo] = useState([]);
 
   if(isLoading){
     <Loader />
@@ -61,7 +62,7 @@ export default function Home() {
             <Auxiliar menuActivo={menuActivo} auxiliarActivo={auxiliarActivo} />
           </Col>
           <Col className='principal'>
-            <Principal menuActivo={menuActivo} terminoBusqueda={terminoBusqueda} terminoAuxiliarBusqueda={terminoAuxiliarBusqueda} />
+            <Principal menuActivo={menuActivo} terminoBusqueda={terminoBusqueda} terminoAuxiliarBusqueda={terminoAuxiliarBusqueda} isloading={isLoading} acervo={acervo} />
           </Col>
         </Row>
         <Row className='footer'>

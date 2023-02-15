@@ -258,3 +258,8 @@ ul.menuPrincipal li svg {
   border: 1px solid rgb(152, 167, 204);
   border-color: rgb(152, 167, 204);
 }
+
+.col.tarjeta {
+  background: #000;
+  width: 100%;
+}
