@@ -241,6 +241,7 @@ ul.menuPrincipal li svg {
   list-style: none;
   scrollbar-width: thin;
   scrollbar-color: rgb(51, 70, 112) rgb(19, 26, 42);
+  overflow-x: hidden;
 }
 
 .auxiliar ul.menuauxiliar li {
