@@ -49,8 +49,14 @@ export default function Registro() {
         <Row>
           <Col></Col>
           <Col xs={12} md={6}>
-            <h1 className='mt-3'>Registro del ACERVO IMCYC {enviado === 'false' ? 'no enviado' : 'enviado'}</h1>
+            <h1 className='mt-3'>Registro del ACERVO IMCYC</h1>
             <hr/>
+            {enviado === 'true' &&
+              <div>
+                <h2>Gracias!, el registro fue agregado con éxito</h2>
+              </div>
+            } 
+            {enviado === 'false' && 
             <Form onSubmit={registro} className='mb-5'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Categoría:</Form.Label>
@@ -96,6 +102,7 @@ export default function Registro() {
                 REGISTRAR ENTRADA
               </Button>
             </Form>
+            }
           </Col>
           <Col></Col>
         </Row>
