@@ -269,6 +269,12 @@ ul.menuPrincipal li svg {
   margin-bottom: 5px;
   border: 1px solid rgb(32, 46, 80);
   border-radius: 2px;
+  transition: all 1s;
+}
+
+.col .tarjeta:hover {
+  border: 1px solid rgb(255, 255, 255);
+  cursor: pointer;
 }
 
 .entrada {

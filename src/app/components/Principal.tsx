@@ -45,7 +45,7 @@ export default function Principal({menuActivo, terminoBusqueda, terminoAuxiliarB
       }
       <Container fluid>
         {!terminoBusqueda && !terminoAuxiliarBusqueda ? <Entrada/> : ''}
-        {terminoBusqueda && acervoFiltro.map((ace: any) => (
+        {terminoBusqueda || terminoAuxiliarBusqueda && acervoFiltro.map((ace: any) => (
           <Row key={ace.id}>
               <Col>
                 <div className="tarjeta">
