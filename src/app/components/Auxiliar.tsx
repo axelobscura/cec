@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { useAcervoCategoriasGenerales } from "lib/swr-hooks";
 import Loader from './Loader';
+import { BiPlusCircle } from 'react-icons/bi';
 
 interface Activo {
   menuActivo: string,
@@ -21,7 +22,7 @@ export default function Auxiliar({ menuActivo, auxiliarActivo }: Activo){
       <ul className='menuauxiliar'>
       {acervoCategoriasGeneral.map((val: any) => {
         return(
-          <li key={val.id} onClick={(val) => auxiliarActivo(val)}>{val.name}</li>
+          <li key={val.id} onClick={(val) => auxiliarActivo(val)}><BiPlusCircle/> {val.name}</li>
         )
       })}
       </ul>
