@@ -26,6 +26,10 @@ export default function Principal({menuActivo, terminoBusqueda, terminoAuxiliarB
     setAcervoFiltro(acervo);
   });
 
+  const renderEntrada = (terminoBusqueda, terminoAuxiliarBusqueda) => {
+
+  }
+
   return (
     <div className='contenidoPrincipal'>
       {menuActivo &&
@@ -44,16 +48,20 @@ export default function Principal({menuActivo, terminoBusqueda, terminoAuxiliarB
         </>
       }
       <Container fluid>
-        {!terminoBusqueda && !terminoAuxiliarBusqueda ? <Entrada/> : ''}
-        {terminoBusqueda || terminoAuxiliarBusqueda && acervoFiltro.map((ace: any) => (
-          <Row key={ace.id}>
-              <Col>
-                <div className="tarjeta">
-                  <BiChevronRightCircle/> {ace.titulo.toUpperCase()}
-                </div>
-              </Col>
-          </Row>
-        ))}
+        {terminoBusqueda || terminoAuxiliarBusqueda ? 
+          acervoFiltro && acervoFiltro.map((ace: any) => (
+            <Row key={ace.id}>
+                <Col>
+                  <div className="tarjeta">
+                    <BiChevronRightCircle/> {ace.titulo.toUpperCase()}
+                  </div>
+                </Col>
+            </Row>
+          ))
+        : 
+          <Entrada/>
+        }
+        
       </Container>
     </div>
   )
