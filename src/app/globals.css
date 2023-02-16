@@ -79,7 +79,7 @@
   padding: 0;
   margin: 0;
   scrollbar-width: thin;
-scrollbar-color: rgb(51, 70, 112) rgb(19, 26, 42);
+  scrollbar-color: rgb(51, 70, 112) rgb(19, 26, 42);
 }
 
 html,
@@ -262,7 +262,20 @@ ul.menuPrincipal li svg {
   border-color: rgb(152, 167, 204);
 }
 
-.col.tarjeta {
-  background: #000;
+.col .tarjeta {
   width: 100%;
+  padding: 12px;
+  margin-bottom: 5px;
+  border: 1px solid rgb(32, 46, 80);
+  border-radius: 2px;
+}
+
+.entrada {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
 }
