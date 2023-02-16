@@ -38,6 +38,10 @@ export default function Home() {
     setAuxiliarTerminoBusqueda(val.target.innerText);
   }
 
+  const inicio = () => {
+    setTerminoBusqueda('');
+  }
+
   return (
     <>
       <Container fluid className='vh-100'>
@@ -47,7 +51,8 @@ export default function Home() {
               src="/logo.svg"
               width={150}
               height={45}
-              alt="Picture of the author"
+              alt="Acervo del cemento y del concreto - Instituto Mexicano del Cemento y del Concreto A.C."
+              onClick={inicio}
             />
           </Col>
           <Col className='wrapBuscador'>

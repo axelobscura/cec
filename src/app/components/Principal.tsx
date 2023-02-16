@@ -44,9 +44,7 @@ export default function Principal({menuActivo, terminoBusqueda, terminoAuxiliarB
         </>
       }
       <Container fluid>
-        {!terminoBusqueda && (
-          <Entrada/>
-        )}
+        {!terminoBusqueda && !terminoAuxiliarBusqueda ? <Entrada/> : ''}
         {terminoBusqueda && acervoFiltro.map((ace: any) => (
           <Row key={ace.id}>
               <Col>
