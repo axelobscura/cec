@@ -26,9 +26,6 @@ export default function Principal({menuActivo, terminoBusqueda, terminoAuxiliarB
     setAcervoFiltro(acervo);
   });
 
-  const renderEntrada = (terminoBusqueda, terminoAuxiliarBusqueda) => {
-
-  }
 
   return (
     <div className='contenidoPrincipal'>
@@ -39,7 +36,7 @@ export default function Principal({menuActivo, terminoBusqueda, terminoAuxiliarB
       }
       {terminoBusqueda &&
         <>
-          <h4><SiPlex style={{marginRight: '5px'}} /> {terminoBusqueda.toUpperCase()}</h4>
+          <h4><SiPlex style={{marginRight: '5px'}} /> {terminoBusqueda?.toUpperCase()}</h4>
         </>
       }
       {terminoAuxiliarBusqueda &&

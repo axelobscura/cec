@@ -39,7 +39,7 @@ export default function Home() {
   }
 
   const inicio = () => {
-    setTerminoBusqueda('');
+    setTerminoBusqueda('test');
   }
 
   return (
