@@ -7,7 +7,7 @@ import { BiChevronRightCircle } from "react-icons/bi"
 
 type ContenidoProps = {
   menuActivo: any | unknown,
-  terminoBusqueda: any |unknown,
+  terminoBusqueda: string | unknown,
   terminoAuxiliarBusqueda: any | unknown,
   isloading: any | unknown,
   acervo: any | unknown,
