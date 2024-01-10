@@ -52,7 +52,7 @@ export default function Principal({menuActivo, terminoBusqueda, terminoAuxiliarB
           acervoFiltro && acervoFiltro.map((ace: any) => (
             <Row key={ace.id}>
                 <Col>
-                  <div className="tarjeta">
+                  <div className="tarjeta text-white">
                     <BiChevronRightCircle/> {ace.titulo.toUpperCase()}
                   </div>
                 </Col>
@@ -61,7 +61,6 @@ export default function Principal({menuActivo, terminoBusqueda, terminoAuxiliarB
         : 
           <Entrada/>
         }
-        
       </Container>
     </div>
   )
