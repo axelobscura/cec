@@ -7,7 +7,7 @@ import { BiChevronRightCircle } from "react-icons/bi"
 
 type ContenidoProps = {
   menuActivo: any | unknown,
-  terminoBusqueda: string | unknown,
+  terminoBusqueda: string | undefined,
   terminoAuxiliarBusqueda: any | unknown,
   isloading: any | unknown,
   acervo: any | unknown,
@@ -26,6 +26,8 @@ export default function Principal({menuActivo, terminoBusqueda, terminoAuxiliarB
     setAcervoFiltro(acervo);
   });
 
+  let terminoBusquedaa: string | undefined = terminoBusqueda ? terminoBusqueda : '';
+
 
   return (
     <div className='contenidoPrincipal'>
@@ -36,7 +38,7 @@ export default function Principal({menuActivo, terminoBusqueda, terminoAuxiliarB
       }
       {terminoBusqueda &&
         <>
-          <h4><SiPlex style={{marginRight: '5px'}} /> {terminoBusqueda?.toUpperCase()}</h4>
+          <h4><SiPlex style={{marginRight: '5px'}} /> {terminoBusquedaa.toUpperCase()}</h4>
         </>
       }
       {terminoAuxiliarBusqueda &&
