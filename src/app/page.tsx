@@ -72,7 +72,7 @@ export default function Home() {
         </Row>
         <Row className='footer'>
           <Col>
-          <p><small>® 1956 - 2023. Instituto Mexicano del Cemento y del Concreto A.C.</small></p>
+          <p className='text-gray-100'><small>® 1956 - 2023. Instituto Mexicano del Cemento y del Concreto A.C.</small></p>
           </Col>
         </Row>
       </Container>
