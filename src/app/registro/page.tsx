@@ -3,9 +3,18 @@ import { useState } from 'react';
 import {Container, Row, Col} from 'react-bootstrap'
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
+import { useCategorias } from "lib/swr-hooks"
+import Loader from "../components/Loader";
 
 export default function Registro() {
   const [ enviado, setEnviado ] = useState('false');
+  const { categorias, isLoading } = useCategorias();
+
+  if(isLoading){
+    return(
+      <Loader />
+    )
+  }
 
   async function registro(e: any) {
     e.preventDefault();
@@ -61,6 +70,9 @@ export default function Registro() {
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Categoría:</Form.Label>
                 <Form.Select name='categoria'>
+                  {categorias.map((catego: any) => (
+                    <option key={catego.id} value={catego.id}>{catego.name}</option>
+                  ))}
                   <option value='8'>Libro</option>
                   <option value='3'>Investigación</option>
                   <option value='7'>Líderes de la construcción</option>
