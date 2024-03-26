@@ -22,7 +22,7 @@ export default function Auxiliar({ menuActivo, auxiliarActivo }: Activo){
       <ul className='menuauxiliar'>
       {acervoCategoriasGeneral.map((val: any) => {
         return(
-          <li key={val.id} onClick={(val) => auxiliarActivo(val)} className='text-gray-100'><BiPlusCircle/> {val.name}</li>
+          <li key={val.id} onClick={(val) => auxiliarActivo(val)} className='text-white'><BiPlusCircle/> {val.name}</li>
         )
       })}
       </ul>

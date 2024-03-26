@@ -30,7 +30,7 @@ export default function Menu({menuHover}:MenuProps) {
         return(
           <li key={val.id} className="m-1">
             {
-              val.id === 1 ? <SiFirebase data-nombre={val.nombre} onClick={(e:any) => menuHover(e)} size='30px' /> : 
+              val.id === 1 ? <SiFirebase data-nombre={val.nombre} className="text-white" onClick={(e:any) => menuHover(e)} size='30px' /> : 
               val.id === 2 ? <SiBroadcom data-nombre={val.nombre} onClick={(e:any) => menuHover(e)} size='30px' /> : 
               val.id === 3 ? <SiCastro data-nombre={val.nombre} onClick={(e:any) => menuHover(e)} size='30px' /> : 
               val.id === 4 ? <SiCkeditor4 data-nombre={val.nombre} onClick={(e:any) => menuHover(e)} size='30px' /> : 
