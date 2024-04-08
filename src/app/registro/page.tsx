@@ -71,7 +71,7 @@ export default function Registro() {
             {enviado === 'false' && 
             <Form onSubmit={registro} className='mb-5'>
               <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Categoría:</Form.Label>
+                <Form.Label className='text-white'>Categoría:</Form.Label>
                 <Form.Select name='categoria'>
                   <option value='8'>Libro</option>
                   <option value='3'>Investigación</option>
@@ -87,19 +87,19 @@ export default function Registro() {
                 </Form.Select>
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Título de la publicación:</Form.Label>
+                <Form.Label className='text-white'>Título de la publicación:</Form.Label>
                 <Form.Control type="text" name='titulo' placeholder="Ingresar el título en altas y bajas" />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Autor(es):</Form.Label>
+                <Form.Label className='text-white'>Autor(es):</Form.Label>
                 <Form.Control type="text" name='autor' placeholder="Ingresar autores separados por comas" />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Ano:</Form.Label>
+                <Form.Label className='text-white'>Ano:</Form.Label>
                 <Form.Control type="number" name='ano' placeholder="Ingresar año de la publicación" />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Mes:</Form.Label>
+                <Form.Label className='text-white'>Mes:</Form.Label>
                 <Form.Select name='mes'>
                   <option value='Enero'>Enero</option>
                   <option value='Febrero'>Febrero</option>
@@ -116,23 +116,23 @@ export default function Registro() {
                 </Form.Select>
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>ISBN:</Form.Label>
+                <Form.Label className='text-white'>ISBN:</Form.Label>
                 <Form.Control type="text" name='isbn' placeholder="Registro de la publicación" />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Editorial:</Form.Label>
+                <Form.Label className='text-white'>Editorial:</Form.Label>
                 <Form.Control type="text" name='editorial' placeholder="Registro de la publicación" />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Nombre del archivo (EJ. principios_del_concreto.pdf):</Form.Label>
+                <Form.Label className='text-white'>Nombre del archivo (EJ. principios_del_concreto.pdf):</Form.Label>
                 <Form.Control type="text" name='archivo' placeholder="Registro del archivo sin espacios" />
               </Form.Group>
               <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                <Form.Label>Presentación:</Form.Label>
+                <Form.Label className='text-white'>Presentación:</Form.Label>
                 <Form.Control as="textarea" name='presentacion' rows={3} />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Palabras clave (Separar con comas Ej. concreto, cemento):</Form.Label>
+                <Form.Label className='text-white'>Palabras clave (Separar con comas Ej. concreto, cemento):</Form.Label>
                 <Form.Control type="text" name='claves' placeholder="Registro del archivo sin espacios" />
               </Form.Group>
               <Button variant="primary" type="submit">
