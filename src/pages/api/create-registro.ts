@@ -6,6 +6,8 @@ const handler: NextApiHandler = async (req, res) => {
     categoria,
     titulo,
     autor,
+    ano,
+    mes,
     isbn,
     editorial,
     archivo,
@@ -21,8 +23,8 @@ const handler: NextApiHandler = async (req, res) => {
 
     const results = await query(
       `
-      INSERT INTO acervo (categoria, titulo, autor, isbn, editorial, archivo, presentacion, claves)
-      VALUES ('${categoria}', '${titulo}', '${autor}', '${isbn}', '${editorial}', '${archivo}', '${presentacion}', '${claves}')
+      INSERT INTO acervo (categoria, titulo, autor, ano, mes, isbn, editorial, archivo, presentacion, claves)
+      VALUES ('${categoria}', '${titulo}', '${autor}', '${ano}', '${mes}', '${isbn}', '${editorial}', '${archivo}', '${presentacion}', '${claves}')
       `,
     )
     return res.json(results)

@@ -21,12 +21,13 @@ export default function Registro() {
     let categoria = e.target.categoria.value;
     let titulo = e.target.titulo.value;
     let autor = e.target.autor.value;
+    let ano = e.target.ano.value;
+    let mes = e.target.mes.value;
     let isbn = e.target.isbn.value;
     let editorial = e.target.editorial.value;
     let archivo = e.target.archivo.value;
     let presentacion = e.target.presentacion.value;
     let claves = e.target.claves.value;
-
 
     try {
       const res = await fetch('/api/create-registro', {
@@ -38,6 +39,8 @@ export default function Registro() {
             categoria,
             titulo,
             autor,
+            ano,
+            mes,
             isbn,
             editorial,
             archivo,
@@ -70,9 +73,6 @@ export default function Registro() {
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Categoría:</Form.Label>
                 <Form.Select name='categoria'>
-                  {categorias.map((catego: any) => (
-                    <option key={catego.id} value={catego.id}>{catego.name}</option>
-                  ))}
                   <option value='8'>Libro</option>
                   <option value='3'>Investigación</option>
                   <option value='7'>Líderes de la construcción</option>
@@ -80,6 +80,10 @@ export default function Registro() {
                   <option value='5'>Journal</option>
                   <option value='9'>Webinar</option>
                   <option value='4'>Eventos</option>
+                  {categorias.map((catego: any) => (
+                    <option key={catego.id} value={catego.id}>{catego.name}</option>
+                  ))}
+                  
                 </Form.Select>
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -89,6 +93,27 @@ export default function Registro() {
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Autor(es):</Form.Label>
                 <Form.Control type="text" name='autor' placeholder="Ingresar autores separados por comas" />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Ano:</Form.Label>
+                <Form.Control type="number" name='ano' placeholder="Ingresar año de la publicación" />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Mes:</Form.Label>
+                <Form.Select name='mes'>
+                  <option value='Enero'>Enero</option>
+                  <option value='Febrero'>Febrero</option>
+                  <option value='Marzo'>Marzo</option>
+                  <option value='Abril'>Abril</option>
+                  <option value='Mayo'>Mayo</option>
+                  <option value='Junio'>Junio</option>
+                  <option value='Julio'>Julio</option>
+                  <option value='Agosto'>Agosto</option>
+                  <option value='Septiembre'>Septiembre</option>
+                  <option value='Octubre'>Octubre</option>
+                  <option value='Noviembre'>Noviembre</option>
+                  <option value='Diciembre'>Diciembre</option>
+                </Form.Select>
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>ISBN:</Form.Label>
