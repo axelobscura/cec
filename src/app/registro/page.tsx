@@ -61,11 +61,11 @@ export default function Registro() {
         <Row>
           <Col></Col>
           <Col xs={12} md={6}>
-            <h1 className='mt-3'>Registro del ACERVO IMCYC</h1>
+            <h1 className='mt-3 text-white'>Registro del ACERVO IMCYC</h1>
             <hr/>
             {enviado === 'true' &&
               <div>
-                <h2>Gracias!, el registro fue agregado con éxito</h2>
+                <h2 className='text-white'>Gracias!, el registro fue agregado con éxito</h2>
               </div>
             } 
             {enviado === 'false' && 
