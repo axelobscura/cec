@@ -21,13 +21,21 @@ export default function Principal({menuActivo, terminoBusqueda, terminoAuxiliarB
     <Loader />
   }
 
-  useEffect(() => {
-    // console.log('el acervo: '+acervo);
-    setAcervoFiltro(acervo);
-  });
-
   let terminoBusquedaa: string | undefined = terminoBusqueda ? terminoBusqueda : '';
 
+  useEffect(() => {
+    //Si no hay una búsqueda en el campo de texto se muestra todo el acervo
+    if (terminoBusquedaa === ''){
+      setAcervoFiltro(acervo)
+    }else{
+      //Se filtra por lo que está escrito en el input y se guarda en un arreglo llamado acervoFiltro
+      var filtroAcervo = acervo.filter((item:any)=>{
+        return item.titulo.toLowerCase().includes(terminoBusquedaa.toLowerCase())
+      });
+      setAcervoFiltro(filtroAcervo)
+    }
+    //setAcervoFiltro(acervo);
+  }, [terminoBusqueda]);
 
   return (
     <div className='contenidoPrincipal'>
