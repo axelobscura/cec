@@ -35,7 +35,7 @@ export default function Principal({menuActivo, terminoBusqueda, terminoAuxiliarB
       setAcervoFiltro(filtroAcervo)
     }
     //setAcervoFiltro(acervo);
-  }, [terminoBusqueda]);
+  }, [terminoBusqueda, terminoBusquedaa]);
 
   return (
     <div className='contenidoPrincipal'>
