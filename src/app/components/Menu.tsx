@@ -30,14 +30,14 @@ export default function Menu({menuHover}:MenuProps) {
         return(
           <li key={val.id} className="m-1">
             {
-              val.id === 1 ? <SiFirebase data-nombre={val.nombre} className="text-white" onClick={(e:any) => menuHover(e)} size='30px' /> : 
-              val.id === 2 ? <SiBroadcom data-nombre={val.nombre} onClick={(e:any) => menuHover(e)} size='30px' /> : 
-              val.id === 3 ? <SiCastro data-nombre={val.nombre} onClick={(e:any) => menuHover(e)} size='30px' /> : 
-              val.id === 4 ? <SiCkeditor4 data-nombre={val.nombre} onClick={(e:any) => menuHover(e)} size='30px' /> : 
-              val.id === 5 ? <SiChainlink data-nombre={val.nombre} onClick={(e:any) => menuHover(e)} size='30px' /> : 
-              val.id === 6 ? <SiCrystal data-nombre={val.nombre} onClick={(e:any) => menuHover(e)} size='30px' /> : 
-              val.id === 7 ? <SiDiscogs data-nombre={val.nombre} onClick={(e:any) => menuHover(e)} size='30px' /> : 
-              val.id === 8 ? <SiAppveyor data-nombre={val.nombre} onClick={(e:any) => menuHover(e)} size='30px' /> : 
+              val.id === 210 ? <SiFirebase data-nombre={val.name} className="text-white" onClick={(e:any) => menuHover(e)} size='30px' /> : 
+              val.id === 211 ? <SiBroadcom data-nombre={val.nombre} onClick={(e:any) => menuHover(e)} size='30px' /> : 
+              val.id === 212 ? <SiCastro data-nombre={val.nombre} onClick={(e:any) => menuHover(e)} size='30px' /> : 
+              val.id === 213 ? <SiCkeditor4 data-nombre={val.nombre} onClick={(e:any) => menuHover(e)} size='30px' /> : 
+              val.id === 214 ? <SiChainlink data-nombre={val.nombre} onClick={(e:any) => menuHover(e)} size='30px' /> : 
+              val.id === 215 ? <SiCrystal data-nombre={val.nombre} onClick={(e:any) => menuHover(e)} size='30px' /> : 
+              val.id === 216 ? <SiDiscogs data-nombre={val.nombre} onClick={(e:any) => menuHover(e)} size='30px' /> : 
+              val.id === 217 ? <SiAppveyor data-nombre={val.nombre} onClick={(e:any) => menuHover(e)} size='30px' /> : 
               ''
             }
           </li>
