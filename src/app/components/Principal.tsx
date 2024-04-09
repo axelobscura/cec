@@ -60,7 +60,8 @@ export default function Principal({menuActivo, terminoBusqueda, terminoAuxiliarB
             <Row key={ace.id}>
                 <Col>
                   <div className="tarjeta text-white">
-                    <BiChevronRightCircle/> {ace.titulo.toUpperCase()}
+                    <BiChevronRightCircle/> {ace.titulo.toUpperCase()}<br/>
+                    <span>{ace.autor.toUpperCase()}</span>
                   </div>
                 </Col>
             </Row>
