@@ -25,7 +25,7 @@ export default function Principal({menuActivo, terminoBusqueda, terminoAuxiliarB
 
   useEffect(() => {
     //Si no hay una búsqueda en el campo de texto se muestra todo el acervo
-    if (terminoBusquedaa === ''){
+    if (!terminoBusquedaa){
       setAcervoFiltro(acervo)
     }else{
       //Se filtra por lo que está escrito en el input y se guarda en un arreglo llamado acervoFiltro
