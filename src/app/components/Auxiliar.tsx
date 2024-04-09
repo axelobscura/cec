@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { useAcervoCategoriasGenerales } from "lib/swr-hooks";
+import { useCategorias } from "lib/swr-hooks";
 import Loader from './Loader';
 import { BiPlusCircle } from 'react-icons/bi';
 
@@ -9,7 +9,7 @@ interface Activo {
 }
 
 export default function Auxiliar({ menuActivo, auxiliarActivo }: Activo){
-  const { acervoCategoriasGeneral, isLoading } = useAcervoCategoriasGenerales();
+  const { categorias, isLoading } = useCategorias();
   if(isLoading){
     return(
       <Loader />
@@ -20,7 +20,7 @@ export default function Auxiliar({ menuActivo, auxiliarActivo }: Activo){
     <div className='auxiliar'>
       {/*<h2>{menuActivo}</h2>*/}
       <ul className='menuauxiliar'>
-      {acervoCategoriasGeneral.map((val: any) => {
+      {categorias.map((val: any) => {
         return(
           <li key={val.id} onClick={(val) => auxiliarActivo(val)} className='text-white'><BiPlusCircle/> {val.name}</li>
         )
