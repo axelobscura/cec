@@ -30,7 +30,7 @@ export default function Principal({menuActivo, terminoBusqueda, terminoAuxiliarB
     }else{
       //Se filtra por lo que está escrito en el input y se guarda en un arreglo llamado acervoFiltro
       var filtroAcervo = acervo.filter((item:any)=>{
-        return item.titulo.toLowerCase().includes(terminoBusquedaa.toLowerCase())
+        return item.titulo.toLowerCase().includes(terminoBusquedaa?.toLowerCase())
       });
       setAcervoFiltro(filtroAcervo)
     }
