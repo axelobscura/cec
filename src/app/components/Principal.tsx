@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import Link from "next/link"
 import { SiPlex } from "react-icons/si"
 import {Container, Row, Col} from 'react-bootstrap'
 import Loader from "./Loader"
@@ -59,10 +60,12 @@ export default function Principal({menuActivo, terminoBusqueda, terminoAuxiliarB
           acervoFiltro && acervoFiltro.map((ace: any) => (
             <Row key={ace.id}>
                 <Col>
-                  <div className="tarjeta text-white">
-                    <BiChevronRightCircle/> {ace.titulo.toUpperCase()}<br/>
-                    <span>{ace.autor.toUpperCase()}</span>
-                  </div>
+                  <Link href='/documento'>
+                    <div className="tarjeta text-white">
+                      <BiChevronRightCircle/> {ace.titulo.toUpperCase()}<br/>
+                      <span>{ace.autor.toUpperCase()}</span>
+                    </div>
+                  </Link>
                 </Col>
             </Row>
           ))

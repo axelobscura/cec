@@ -1,13 +1,15 @@
 "use client";
 import { useState, useEffect } from 'react';
 import { useAcervo } from 'lib/swr-hooks'
-import {Container, Row, Col} from 'react-bootstrap'
-import Image from 'next/image'
-import Menu from './components/Menu'
+import {Container, Row, Col} from 'react-bootstrap';
+import Image from 'next/image';
+import Menu from './components/Menu';
 import Loader from './components/Loader';
 import Buscador from './components/Buscador';
 import Principal from './components/Principal';
 import Auxiliar from './components/Auxiliar';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 export default function Home() {
   const {acervo, isLoading} = useAcervo();
@@ -45,20 +47,7 @@ export default function Home() {
   return (
     <>
       <Container fluid className='vh-100'>
-        <Row className='header'>
-          <Col sm={4}>
-            <Image
-              src="/logo.svg"
-              width={150}
-              height={45}
-              alt="Acervo del cemento y del concreto - Instituto Mexicano del Cemento y del Concreto A.C."
-              onClick={inicio}
-            />
-          </Col>
-          <Col className='wrapBuscador'>
-            <Buscador termino={(e: any) => termino(e)} />
-          </Col>
-        </Row>
+        <Header inicio={inicio} termino={termino} />
         <Row className='contenido'>
           <Col xs={1} sm={1} className='menu'>
             <Menu menuHover={(e: any) => menuHover(e)} />
@@ -70,11 +59,7 @@ export default function Home() {
             <Principal menuActivo={menuActivo} terminoBusqueda={terminoBusqueda} terminoAuxiliarBusqueda={terminoAuxiliarBusqueda} isloading={isLoading} acervo={acervo} />
           </Col>
         </Row>
-        <Row className='footer'>
-          <Col>
-          <p className='text-gray-100'><small>® 1956 - 2024. Instituto Mexicano del Cemento y del Concreto A.C.</small></p>
-          </Col>
-        </Row>
+        <Footer/>
       </Container>
     </>
   )
