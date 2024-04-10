@@ -2,10 +2,8 @@
 import { useState, useEffect } from 'react';
 import { useAcervo } from 'lib/swr-hooks'
 import {Container, Row, Col} from 'react-bootstrap';
-import Image from 'next/image';
 import Menu from './components/Menu';
 import Loader from './components/Loader';
-import Buscador from './components/Buscador';
 import Principal from './components/Principal';
 import Auxiliar from './components/Auxiliar';
 import Header from './components/Header';

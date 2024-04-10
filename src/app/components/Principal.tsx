@@ -60,7 +60,7 @@ export default function Principal({menuActivo, terminoBusqueda, terminoAuxiliarB
           acervoFiltro && acervoFiltro.map((ace: any) => (
             <Row key={ace.id}>
                 <Col>
-                  <Link href='/documento'>
+                  <Link href={`/documento/${ace.titulo.toLowerCase().split(' ').join('-')}`} >
                     <div className="tarjeta text-white">
                       <BiChevronRightCircle/> {ace.titulo.toUpperCase()}<br/>
                       <span>{ace.autor.toUpperCase()}</span>
