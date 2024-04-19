@@ -21,7 +21,6 @@ export default function Entrada({termino}: ContenidoProps){
           <p className='mb-2 text-white'>Bienvenido al</p>
           <h1 className='text-white'>ACERVO DEL CEMENTO Y DEL CONCRETO</h1>
           <h5 className='text-white'>Instituto Mexicano del Cemento y del Concreto A.C.</h5>
-          <Buscador termino={(e: any) => termino(e)}/>
         </Col>
       </Row>
     </Container>
