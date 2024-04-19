@@ -107,6 +107,7 @@ a {
   text-decoration: none;
   scrollbar-width: thin;
   scrollbar-color: rgb(51, 70, 112) rgb(19, 26, 42);
+  text-decoration: none !important;
 }
 
 @media (prefers-color-scheme: dark) {
