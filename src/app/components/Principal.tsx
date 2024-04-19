@@ -60,7 +60,7 @@ export default function Principal({menuActivo, terminoBusqueda, terminoAuxiliarB
         {terminoBusqueda || terminoAuxiliarBusqueda ? 
           acervoFiltro && acervoFiltro.map((ace: any) => {
             let extArchivo = ace.archivo.split(' ').join('+').slice(-3).toLowerCase();
-            let nomArchivo = ace.archivo.split(' ').join('+').slice(0, -3);
+            let nomArchivo = ace.archivo.split('_').join('+').slice(0, -3);
             return (
               <Row key={ace.id}>
                   <Col>
