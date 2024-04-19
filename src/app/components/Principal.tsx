@@ -38,6 +38,8 @@ export default function Principal({menuActivo, terminoBusqueda, terminoAuxiliarB
     //setAcervoFiltro(acervo);
   }, [terminoBusqueda, terminoBusquedaa]);
 
+  console.log(acervo);
+
   return (
     <div className='contenidoPrincipal'>
       {menuActivo &&

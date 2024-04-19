@@ -7,7 +7,7 @@ const handler: NextApiHandler = async (_, res) => {
       SELECT *
       FROM acervo
       ORDER BY id ASC
-      LIMIT 400;
+      LIMIT 3000;
     `)
     return res.json(results)
   } catch (e: any) {
