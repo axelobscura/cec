@@ -58,19 +58,23 @@ export default function Principal({menuActivo, terminoBusqueda, terminoAuxiliarB
       }
       <Container fluid>
         {terminoBusqueda || terminoAuxiliarBusqueda ? 
-          acervoFiltro && acervoFiltro.map((ace: any) => (
-            <Row key={ace.id}>
-                <Col>
-                  <Link href={`https://s3.amazonaws.com/cec.imcyc.com/{ace.archivo.split('_').join(' ')}`} rel="noopener noreferrer" target="_blank">
-                    <div className="tarjeta text-white">
-                      <BiChevronRightCircle/> {ace.titulo.toUpperCase()}<br/>
-                      <span>{ace.autor.toUpperCase()}</span>
-                      <p><small>{ace.archivo.split('_').join(' ')}</small></p>
-                    </div>
-                  </Link>
-                </Col>
-            </Row>
-          ))
+          acervoFiltro && acervoFiltro.map((ace: any) => {
+            let extArchivo = ace.archivo.split(' ').join('+').slice(-3).toLowerCase();
+            let nomArchivo = ace.archivo.split(' ').join('+').slice(0, -3);
+            return (
+              <Row key={ace.id}>
+                  <Col>
+                    <Link href={`https://s3.amazonaws.com/cec.imcyc.com/${nomArchivo + extArchivo}`} rel="noopener noreferrer" target="_blank">
+                      <div className="tarjeta text-white">
+                        <BiChevronRightCircle/> {ace.titulo.toUpperCase()}<br/>
+                        <span>{ace.autor.toUpperCase()}</span>
+                        <p><small>{nomArchivo + extArchivo}</small></p>
+                      </div>
+                    </Link>
+                  </Col>
+              </Row>
+            )
+          })
         : 
           <Entrada termino={termino}/>
         }
