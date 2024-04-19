@@ -47,14 +47,11 @@ export default function Home() {
       <Container fluid className='vh-100'>
         <Header inicio={inicio} termino={termino} />
         <Row className='contenido'>
-          <Col xs={1} sm={1} className='menu'>
-            <Menu menuHover={(e: any) => menuHover(e)} />
-          </Col>
           <Col sm={3} className='menu'>
             <Auxiliar menuActivo={menuActivo} auxiliarActivo={auxiliarActivo} />
           </Col>
           <Col className='principal'>
-            <Principal menuActivo={menuActivo} terminoBusqueda={terminoBusqueda} terminoAuxiliarBusqueda={terminoAuxiliarBusqueda} isloading={isLoading} acervo={acervo} />
+            <Principal menuActivo={menuActivo} terminoBusqueda={terminoBusqueda} terminoAuxiliarBusqueda={terminoAuxiliarBusqueda} isloading={isLoading} acervo={acervo} termino={termino} />
           </Col>
         </Row>
         <Footer/>

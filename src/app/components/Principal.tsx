@@ -12,9 +12,10 @@ type ContenidoProps = {
   terminoAuxiliarBusqueda: any | unknown,
   isloading: any | unknown,
   acervo: any | unknown,
+  termino: any | unknown,
 };
 
-export default function Principal({menuActivo, terminoBusqueda, terminoAuxiliarBusqueda, isloading, acervo}: ContenidoProps){
+export default function Principal({menuActivo, terminoBusqueda, terminoAuxiliarBusqueda, isloading, acervo, termino}: ContenidoProps){
 
   const [acervoFiltro, setAcervoFiltro] = useState([]);
 
@@ -37,8 +38,6 @@ export default function Principal({menuActivo, terminoBusqueda, terminoAuxiliarB
     }
     //setAcervoFiltro(acervo);
   }, [terminoBusqueda, terminoBusquedaa]);
-
-  console.log(acervo);
 
   return (
     <div className='contenidoPrincipal'>
@@ -72,7 +71,7 @@ export default function Principal({menuActivo, terminoBusqueda, terminoAuxiliarB
             </Row>
           ))
         : 
-          <Entrada/>
+          <Entrada termino={termino}/>
         }
       </Container>
     </div>
