@@ -13,7 +13,7 @@ export default function Buscador({ termino }: ElTermino){
           type="text" 
           name="termino" 
           placeholder="Buscar contenido" 
-          onChange={(e) => termino(e)} 
+          onChange={(e) => termino(e)}
         />
       </Form.Group>
     </Form>
